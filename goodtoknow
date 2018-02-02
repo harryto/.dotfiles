@@ -38,7 +38,7 @@ git:
 	and not have to do what you tried in the first place 
 	if you've already done that and you need to change it
 
-	git remote set url origin git@github.com:username/repo.git
+	git remote set-url origin git@github.com:username/repo.git
 
 	
 	the main part of git: how to use it: 
