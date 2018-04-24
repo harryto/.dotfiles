@@ -4,15 +4,17 @@
 " set utf 8
 set encoding=utf8
 
-" set number, set number 
-set number 
+" set number, set number
+set number
 
-" this default color scheme 
-set background=dark 
+" this default color scheme
+set background=dark
 
 " for parenthesis 
 set showmatch 
 
+" for tabs 
+set tabstop=4
 " syntax on means that functions are different colors and variables are 
 " different colors 
 
@@ -77,9 +79,9 @@ let g:airline_section_z = '%l/%L'
 " tabline, because i dont like the default tabline 
 let g:airline#extensions#tabline#enabled = 1
 " tabline, because i done like the default airline tabline 
-let g:airline#extensions#tabline#left_sep = '|'
-let g:airline#extensions#tabline#left_alt_sep = '|'
-let g:airline#extensions#tabline#buffer_nr_show = 0 
+let g:airline#extensions#tabline#left_sep       = '|'
+let g:airline#extensions#tabline#left_alt_sep   = '|'
+let g:airline#extensions#tabline#buffer_nr_show = 0
 
 " Plugin for fugitive 
 " this is a git wrapper, should do stuffs easier with git straight from vim 
@@ -91,6 +93,9 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'ryanoasis/vim-devicons'
 
 let g:airline_powerline_fonts = 1
+
+" Tabular to make thing look in place and not all over the place
+Plugin 'godlygeek/tabular'
 
 " NERDCommenter 
 " for commenting and well, since we're still young, documenting inside the
