@@ -69,6 +69,8 @@ Plugin 'ctrlpvim/ctrlp.vim'
 
 " Nerdtree's old shortcut, now ctrlp because i use <c-p> for autocomplete
 let g:ctrlp_map = '<c-n>'
+let g:ctrlp_cmd = 'CtrlPLastMode'
+let g:ctrlp_extensions = [ 'line', 'dir'] 
 
 " airline for the pretty line down there 
 Plugin 'vim-airline/vim-airline'
