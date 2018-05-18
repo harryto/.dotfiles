@@ -5,7 +5,7 @@
 # point in time 
 
 # make sure vundle exists before installing 
-if [ -e ~/.vim/bundle/Vundle.vim]
+if [ -e ~/.vim/bundle/Vundle.vim ];
 then 
 	echo "found Vundle, therefore won't install vundle a second time cause that's dumb; "
 else
@@ -16,7 +16,7 @@ else
 fi
 
 # I think this goes the same for our tmux file 
-if [ -f /usr/local/bin/tmux-vim-select-pane]
+if [ -f /usr/local/bin/tmux-vim-select-pane ];
 then 
 	echo "found tmux, not installing"
 else
