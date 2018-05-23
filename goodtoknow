@@ -2,12 +2,17 @@ so some of the things that you might do well to remember:
 
 tmux: 	
 	C-a is the prefix 
-	C-a : split view horizontally 
+	C-a " split view horizontally 
 	C-a % split view vertically 
 	C-a [ is scroll 
 	
 	C-h/j/k/l is to move around 
 	note that this works for vim splits too 
+
+	C-t gives you a new tab 
+	S-left ; S-right to move around 
+	C-S- left/right to swap
+	S up/down to move between remote and local tmux
 
 vim : 
 	:colo 		the colorscheme 
@@ -52,3 +57,8 @@ git:
 	merge them together: 			git merge branch_name && git push
 	delete your branch (optional):		git branch -d branch_name	
 	
+	some new stuffs: 
+		to compare changes, see git diff. SEE, use google 
+		to ignore all changes on a file and exclude a file from git pull: 
+		
+		git update-index --assume-unchaged /path/to/file
