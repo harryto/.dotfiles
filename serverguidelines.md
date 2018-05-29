@@ -154,3 +154,39 @@ Running `git diff` shows you the differences between 2 branches.
 
 # 03 what the /home/git directory is for and if you want a private repo 
 
+This section covers what the /home/git directory on this server is used for, how to use it and if you want a private repo, how to do that.
+
+## the /home/git directory 
+
+The /home/git directory is the directory for public repos in this server. Meaning the world can see it, but only you and everyone with an account on this server has read/write access. Oh btw if you want to see what the world can see its at *thisserver_but_nonameyet.org*/git
+
+to clone a repo from this: 
+
+```
+git clone git@thiseserver:/home/git/repo.git
+```
+
+`git remote add` works too. 
+
+If you have a user account on this server then you should have read and write access to all repos on file. 
+
+for a new repo (note: its public), just type in: 
+
+```
+ssh git@thisserver newrepo REPOSITORY_NAME.git
+```
+
+You won't however be able to use ssh to get a bash shell from the git user. You will however get a git shell, which incidentally just has a few commands like `list`, `help`, `exit`, `newrepo` and `addkey`, one of which you cant' use 
+
+For your own private repository, that you can ssh from, run: 
+
+```
+mkdir repo.git 
+cd repo.git 
+git init --bare
+```
+
+This will create a .git repository on this server under your account. It won't show up on the /git webpage. If you want to allow certain users write permission, then please contact malloc 
+
+# 04 final question
+Any questions? I have a mail: harryt2996@gmail.com 
