@@ -87,22 +87,26 @@ map <leader>l <Plug>(Limelight)
 autocmd VimEnter * Limelight
 ""let g:limelight_conceal_ctermfg = 240
 
+" Plugin for text alignment
+Plugin 'junegunn/vim-easy-align'
+nmap ga <Plug>(EasyAlign)
+
 " Plugin for CtrlP
 Plugin 'ctrlpvim/ctrlp.vim'
 
 " Nerdtree's old shortcut, now ctrlp because i use <c-p> for autocomplete
-let g:ctrlp_map = '<c-n>'
-let g:ctrlp_cmd = 'CtrlPLastMode'
-let g:ctrlp_extensions = [ 'line', 'dir'] 
+let g:ctrlp_map        = '<c-n>'
+let g:ctrlp_cmd        = 'CtrlPLastMode'
+let g:ctrlp_extensions = [ 'line', 'dir']
 
 " airline for the pretty line down there 
 Plugin 'vim-airline/vim-airline'
 " this is for airline pusing out of bounds of tmux: 
 " not a good fix but its a fix 
-let g:airline#extensions#whitespace#symbol = '!' 
-let g:airline_section_z = '%l/%L'
+let g:airline#extensions#whitespace#symbol      = '!'
+let g:airline_section_z                         = '%l/%L'
 " tabline, because i dont like the default tabline 
-let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#enabled        = 1
 " tabline, because i done like the default airline tabline 
 let g:airline#extensions#tabline#left_sep       = '|'
 let g:airline#extensions#tabline#left_alt_sep   = '|'
