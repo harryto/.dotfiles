@@ -18,7 +18,15 @@ set tabstop=4
 " syntax on means that functions are different colors and variables are 
 " different colors 
 
-colo koehler 
+" show invisibles 
+set list
+set listchars=tab:›\ ,eol:¬,trail:∙	
+
+set term=xterm
+set t_Co=256
+let &t_AB="\e[48;5;%dm"
+let &t_AF="\e[38;5;%dm"
+colorscheme default
 syntax on
 
 " Disable auto commenting for all files, if you want to change this just
@@ -68,6 +76,16 @@ Plugin 'VundleVim/Vundle.vim'
 ""autocmd StdinReadPre * let s:std_in=1
 ""autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
+Plugin 'haya14busa/incsearch.vim'
+set hlsearch
+map / <Plug>(incsearch-forward)
+let g:incsearch#auto_nohlsearch = 1
+
+Plugin 'junegunn/limelight.vim'
+let g:limelight_conceal_ctermfg = 'DarkGray'
+map <leader>l <Plug>(Limelight)
+autocmd VimEnter * Limelight
+""let g:limelight_conceal_ctermfg = 240
 
 " Plugin for CtrlP
 Plugin 'ctrlpvim/ctrlp.vim'
@@ -100,9 +118,6 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'ryanoasis/vim-devicons'
 
 let g:airline_powerline_fonts = 1
-
-" Tabular to make thing look in place and not all over the place
-Plugin 'godlygeek/tabular'
 
 " NERDCommenter 
 " for commenting and well, since we're still young, documenting inside the
