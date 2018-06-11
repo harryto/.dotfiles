@@ -12,8 +12,8 @@ else
 	echo "\n\nNo Vundle found, installing vundle; \n\n"
 	git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 	echo "\n\nNow running install on vim \\n" 
-	vim +PluginInstall +qall
 fi
+vim +PluginInstall +qall
 
 # I think this goes the same for our tmux file 
 if [ -f /usr/local/bin/tmux-vim-select-pane ];
