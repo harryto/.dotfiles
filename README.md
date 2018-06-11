@@ -1,13 +1,14 @@
-# Dotfiles
+## .Dotfiles
 
-There's no place like `~`
+There's no place like `~`  
 Welcome to Harry's dotfile repository, includes a basic tmux config file, vimrc with Vundle and some bash 
 
-## Installing 
+### Installing
 
-Install file will be found in the bin file.
+Install file can be found in the bin file.
 
 ```
-cd install
+git clone
+cd ~bin
 ./install.sh
 ```
