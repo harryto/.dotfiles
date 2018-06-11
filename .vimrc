@@ -1,5 +1,5 @@
 " Welcome to the Vim configuration file!
-" Not much, but it sets up basic functionality 
+" Not much, but it sets up basic functionality
 
 " set utf 8
 set encoding=utf8
@@ -66,13 +66,13 @@ Plugin 'VundleVim/Vundle.vim'
 
 " Some old code that became irrelevant
 "
-" Close the tree if its the only window left 
+" Close the tree if its the only window left
 ""autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
-" replaced nerdtree toggle with key binding 
+" replaced nerdtree toggle with key binding
 ""map <C-n> :NERDTreeToggle<CR>
 
-" If no file specified when vim is opened then open nerdtree 
+" If no file specified when vim is opened then open nerdtree
 ""autocmd StdinReadPre * let s:std_in=1
 ""autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
@@ -87,6 +87,10 @@ map <leader>l <Plug>(Limelight)
 autocmd VimEnter * Limelight
 ""let g:limelight_conceal_ctermfg = 240
 
+" Conoline Plugin
+Plugin 'miyakogi/conoline.vim'
+"let g:conoline_use_colorscheme_default_normal=1
+
 " Plugin for text alignment
 Plugin 'junegunn/vim-easy-align'
 nmap ga <Plug>(EasyAlign)
@@ -99,22 +103,24 @@ let g:ctrlp_map        = '<c-n>'
 let g:ctrlp_cmd        = 'CtrlPLastMode'
 let g:ctrlp_extensions = [ 'line', 'dir']
 
-" airline for the pretty line down there 
+" airline for the pretty line down there
 Plugin 'vim-airline/vim-airline'
-" this is for airline pusing out of bounds of tmux: 
-" not a good fix but its a fix 
+Plugin 'vim-airline/vim-airline-themes'
+" this is for airline pusing out of bounds of tmux:
+" not a good fix but its a fix
 let g:airline#extensions#whitespace#symbol      = '!'
 let g:airline_section_z                         = '%l/%L'
 " tabline, because i dont like the default tabline 
 let g:airline#extensions#tabline#enabled        = 1
 " tabline, because i done like the default airline tabline 
-let g:airline#extensions#tabline#left_sep       = '|'
-let g:airline#extensions#tabline#left_alt_sep   = '|'
+let g:airline#extensions#tabline#left_sep       = ''
+let g:airline#extensions#tabline#left_alt_sep   = ''
 let g:airline#extensions#tabline#buffer_nr_show = 0
+" theme
+let g:airline_theme                             = 'raven'
 
-" Plugin for fugitive 
-" this is a git wrapper, should do stuffs easier with git straight from vim 
-Plugin 'tpope/vim-fugitive'
+" Plugin for the tmuxline
+Plugin 'edkolev/tmuxline.vim'
 
 " Plugin for Dev Icons 
 " Note: htis should be load behind any plugins that shows on the interface
