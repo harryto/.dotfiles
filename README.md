@@ -5,6 +5,8 @@ Welcome to Harry's dotfile repository, includes a basic tmux config file, vimrc 
 
 ## Installing 
 
+Install file cam be found in the bin file.
+
 ```
 cd install
 ./install.sh
