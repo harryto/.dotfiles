@@ -76,6 +76,8 @@ Plugin 'VundleVim/Vundle.vim'
 ""autocmd StdinReadPre * let s:std_in=1
 ""autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
+Plugin 'tpope/vim-fugitive'
+
 Plugin 'haya14busa/incsearch.vim'
 set hlsearch
 map / <Plug>(incsearch-forward)
@@ -90,6 +92,8 @@ autocmd VimEnter * Limelight
 " Conoline Plugin
 Plugin 'miyakogi/conoline.vim'
 "let g:conoline_color_normal_light = 'ctermbg=grey ctermfg=white'
+"let g:conoline_color_normal_dark = 'guibg=black guifg=white gui=None'
+"let g:conoline_color_insert_dark = 'guibg=black guifg=white gui=bold'
 "let g:conoline_use_colorscheme_default_normal=1
 
 " Plugin for text alignment
