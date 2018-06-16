@@ -52,7 +52,13 @@ Plugin 'plasticboy/vim-markdown'
 set encoding=utf8
 "
 " set number, set number
-set number
+set number relativenumber
+"
+augroup numbertoggle
+		autocmd!
+		autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+		autocmd BufLeave,FocusLost,InsertEnter * set norelativenumber
+augroup END
 "
 " this default color scheme
 set background=dark
