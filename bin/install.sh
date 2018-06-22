@@ -24,3 +24,5 @@ else
 	cp usrtmuxvim.sh /usr/local/bin/tmux-vim-select-pane
 	chmod +x /usr/local/bin/tmux-vim-select-pane
 fi
+
+# TODO: Needs to update the gitconfig folder
