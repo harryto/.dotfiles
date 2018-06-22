@@ -17,3 +17,5 @@ Include the .gitconfig.local file in your .gitconfig. Make sure to put this at t
 [include]
 	path = ~/.gitconfig.local
 ```
+NOTE: These dotfiles are made for use on ConEmu with Bash on Ubuntu on Windows 10. the dotfiles are maily for the terminal, nothing on WMs or desktop environments. They should however work with all terminals. The colorscheme that is used is also in the `colors` file in the `fonts` folder
+
